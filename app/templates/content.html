@@ -13,8 +13,8 @@
                             <input class="form-control" type="text" name="title" placeholder="Title" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="description" cols="100"
-                                      placeholder="Add a Description" required></textarea>
+                            <textarea class="form-control" name="url" cols="100"
+                                      placeholder="Add a Url" required></textarea>
                         </div>
                         <button class="btn btn-primary" type="submit">
                             Add
@@ -28,22 +28,21 @@
             <table class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Title</th>
-                    <th>Description</th>
+                    <th>Url</th>
                     <th>Operations</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for entry in entries %}
                 <tr>
-                    <td>{{ entry.id }}</td>
                     <td><strong>{{ entry.title }}</strong></td>
-                    <td>{{ entry.description }}</td>
+                    <td>{{ entry.url }}</td>
                     <td>
                         <a class="{{ 'btn btn-success' if entry.status else 'btn btn-dark'}}"
-                           href="/turn/{{ entry.id }}">
-                            Turn Status
+                           href="/scrape/">
+{#                           href="/scrape/{{ entry.id }}">#}
+                            Scrape
                         </a>
                         <a class="btn btn-danger"
                            href="/delete/{{ entry.id }}">
