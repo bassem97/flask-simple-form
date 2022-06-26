@@ -29,6 +29,7 @@ def index():
     #     }
     # ]
     entries = Site.query.all()
+
     return render_template('index.html', entries=entries)
 
 
