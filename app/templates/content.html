@@ -40,8 +40,7 @@
                     <td>{{ entry.url }}</td>
                     <td>
                         <a class="{{ 'btn btn-success' if entry.status else 'btn btn-dark'}}"
-                           href="/scrape/">
-{#                           href="/scrape/{{ entry.id }}">#}
+                           href="/scrape/{{ entry.title }}">
                             Scrape
                         </a>
                         <a class="btn btn-danger"
